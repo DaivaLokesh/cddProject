@@ -8,10 +8,10 @@ pipeline {
 
     stages {
         stage('Clone Repository') {
-            steps {
-                git "${GIT_REPO}"
-            }
-        }
+    steps {
+        git branch: 'main', url: 'https://github.com/DaivaLokesh/cddProject.git'
+    }
+    }
 
         stage('Build Docker Image') {
             steps {
